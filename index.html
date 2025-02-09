@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <title>Swiper Example</title>
+    <style>
+      #swiper-container {
+        background-color: red;
+        width: 100%;
+        height: 100vh;
+        max-width: 480px;
+        overflow: hidden;
+        touch-action: none;
+      }
+
+      #swipeable-content {
+        background-color: green;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      #swipeable-content[transizing] {
+        transition: transform 200ms linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" style="display: flex; justify-content: center;">
+      <div id="swiper-container">
+        <div id="swipeable-content">
+          This element is swipeable! try slide it to the right
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
